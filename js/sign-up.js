@@ -51,37 +51,36 @@ function signUp() {
   if (isEmpty() === false) {
     alertMsg.classList.add("text-danger");
     alertMsg.innerHTML = "All inputs is required";
-  }
+  } else {
+    if (
+      validationData(userNameInput) &&
+      validationData(userEmailInput) &&
+      validationData(userPasswordInput)
+    ) {
+      var user = {
+        name: userNameInput.value.trim(),
+        email: userEmailInput.value.trim(),
+        password: userPasswordInput.value.trim(),
+      };
 
-  if (
-    validationData(userNameInput) &&
-    validationData(userEmailInput) &&
-    validationData(userPasswordInput)
-  ) {
-    var user = {
-      name: userNameInput.value.trim(),
-      email: userEmailInput.value.trim(),
-      password: userPasswordInput.value.trim(),
-    };
-
-    if (usersList.length === 0) {
-      usersList.push(user);
-      localStorage.setItem("usersContainer", JSON.stringify(usersList));
-      alertMsg.classList.add("text-success");
-      alertMsg.innerHTML = "Success";
-      clearForm();
-      window.location = "./index.html";
-    }
-    if (isEmailExist() === false) {
-      alertMsg.classList.add("text-danger");
-      alertMsg.innerHTML = "email already exists";
-    } else {
-      usersList.push(user);
-      localStorage.setItem("usersContainer", JSON.stringify(usersList));
-      alertMsg.classList.add("text-success");
-      alertMsg.innerHTML = "Success";
-      clearForm();
-      window.location = "./index.html";
+      if (usersList.length === 0) {
+        usersList.push(user);
+        localStorage.setItem("usersContainer", JSON.stringify(usersList));
+        alertMsg.classList.add("text-success");
+        alertMsg.innerHTML = "Success";
+        window.location = "./index.html";
+        clearForm();
+      } else if (isEmailExist() === false) {
+        alertMsg.classList.add("text-danger");
+        alertMsg.innerHTML = "email already exists";
+      } else {
+        usersList.push(user);
+        localStorage.setItem("usersContainer", JSON.stringify(usersList));
+        alertMsg.classList.add("text-success");
+        alertMsg.innerHTML = "Success";
+        window.location = "./index.html";
+        clearForm();
+      }
     }
   }
 }
