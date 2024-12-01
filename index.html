@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- <link rel="shortcut icon" href="./imgs/bookmark.png" type="image/x-icon" /> -->
+    <meta name="author" content="Aya Sayed" />
+
+    <!--======== Font Family Links ===========  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ======== Icons Css Files =========== -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap-icons.min.css" />
+
+    <!-- ======== Bootstrap Css Files =========== -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- ======== Custom Css Files =========== -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- ========  Home Section =========== -->
+    <main>
+      <section class="home">
+        <div class="container py-5 min-vh-100">
+          <div class="main-title text-center">
+            <h1><span>S</span>mart <span>L</span>ogin <span>S</span>ystem</h1>
+          </div>
+          <div class="form mt-5">
+            <div class="form-content login mx-auto py-4">
+              <h2 class="text-center mb-4">
+                Sign In Here
+                <img src="./imgs/hand-o-down.png" width="30" alt="" />
+              </h2>
+              <div class="input-container w-75 mx-auto mb-4">
+                <input
+                id="userEmail"
+                  class="form-control"
+                  type="email"
+                  placeholder="Enter your Email"
+                  name="email"
+                  required
+                />
+                <span><i class="fa-solid fa-envelope"></i></span>
+              </div>
+              <div class="input-container w-75 mx-auto mb-4">
+                <input
+                id="userPassword"
+                  class="form-control"
+                  type="password"
+                  placeholder="Enter your Password"
+                  name="password"
+                  required
+                />
+                <span><i class="fa-solid fa-lock-open"></i></span>
+              </div>
+
+              <p id="alertMsg" class="text-center"></p>
+
+
+              <button id="signIn" type="submit" class="submit btn btn-sm mx-auto w-75 mt-5">
+                Sign In <span class="ms-2"><i class="fa-solid fa-right-to-bracket"></i></span>
+              </button>
+
+              <p class="text-center mt-3">Don’t have an account? <a href="./sign-up.html">Sign Up</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ======== Bootstrap Js Files =========== -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-- ======== Custom Css Files =========== -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
