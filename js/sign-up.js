@@ -70,7 +70,7 @@ function signUp() {
       alertMsg.classList.add("text-success");
       alertMsg.innerHTML = "Success";
       clearForm();
-      window.location = "/index.html";
+      window.location = "./index.html";
     }
     if (isEmailExist() === false) {
       alertMsg.classList.add("text-danger");
@@ -81,7 +81,7 @@ function signUp() {
       alertMsg.classList.add("text-success");
       alertMsg.innerHTML = "Success";
       clearForm();
-      window.location = "/index.html";
+      window.location = "./index.html";
     }
   }
 }

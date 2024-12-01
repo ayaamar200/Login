@@ -11,7 +11,7 @@ if (userName) {
 //! for logout
 function logout() {
     localStorage.removeItem('sessionUserName')
-    window.location.href = "index.html";
+    window.location = "./index.html";
 }
 
 logoutBtn.addEventListener("click",logout)

@@ -56,7 +56,7 @@ function signIn() {
         alertMsg.classList.add("text-success");
         alertMsg.innerHTML = "Success";
         localStorage.setItem("sessionUserName", usersList[i].name);
-        window.location = "/home.html";
+        window.location = "./home.html";
         break;
       }
     }
