@@ -19,8 +19,6 @@ if (localStorage.getItem("usersContainer") !== null) {
 var signInBtn = document.getElementById("signIn");
 var alertMsg = document.getElementById("alertMsg");
 
-
-
 //!.................. Global Functions ..................//!
 
 //! Function for checking inputs is empty or not.
@@ -49,15 +47,13 @@ function signIn() {
       ) {
         alertMsg.classList.remove("text-success");
         alertMsg.classList.add("text-danger");
-        alertMsg.innerHTML = "incorrect email or password"; 
-        break;
+        alertMsg.innerHTML = "incorrect email or password";
       } else {
         alertMsg.classList.remove("text-danger");
         alertMsg.classList.add("text-success");
         alertMsg.innerHTML = "Success";
         localStorage.setItem("sessionUserName", usersList[i].name);
         window.location = "./home.html";
-        break;
       }
     }
     clearForm();
