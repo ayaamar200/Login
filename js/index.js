@@ -11,6 +11,11 @@ if (localStorage.getItem("usersContainer") !== null) {
   usersList = JSON.parse(localStorage.getItem("usersContainer"));
 }
 
+var userName = localStorage.getItem("sessionUserName");
+if (userName) {
+  window.location = "./home.html";
+}
+
 // console.log(userNameInput,
 //     userEmailInput,
 //     userPasswordInput
