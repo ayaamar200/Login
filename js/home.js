@@ -5,6 +5,8 @@ var logoutBtn = document.getElementById("logout")
 var userName = localStorage.getItem("sessionUserName");
 if (userName) {
   userNameSpan.innerHTML = userName;
+}else{
+  window.location='./index.html'
 }
 
 
